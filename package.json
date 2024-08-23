@@ -4,6 +4,7 @@
   "description": "Esta extensão contém uma coleção de snippets personalizados para o VSCode, projetados para acelerar o desenvolvimento de projetos utilizando a estrutura [FLAMBOYANT]. Cada snippet permite a criação rápida de componentes, garantindo uma padronização e agilidade no processo de desenvolvimento.",
   "version": "1.0.1",
   "icon": "images/flamboyant.png",
+  "id": "flamboyant",
   "publisher": "flamboyant",
   "author": {
       "name":"Nilo Cesar",
