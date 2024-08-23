@@ -1,0 +1,677 @@
+{
+    "[FLAMBOYANT] Attr": {
+        "prefix": "!fAttr",
+        "body": [
+            "attr:{",
+            "  item: '$1',",
+            "  onClick: '$2'",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Todos os elementos são possíveis de colocar novos atributos caso precise. O Botão é que mais se beneficia dessa adição de novos attr. Isso facilita a adição de funções de clique sem a necessidade de criar script auxiliares. Se precisar criar algum atributo que facilite a identificação ou lincar a algum evento javascript em outro elemento, isso tambem é possível. Ex.: colocar attr com o nome de item em uma elemento image ou vídeo."
+    },
+    "[FLAMBOYANT] Accordeon": {
+        "prefix": "!fAccordeon",
+        "body": [
+            "{",
+            "  type: 'accordeon',",
+            "  class: '$1',",
+            "  nextLiberate: false,",
+            "  resource: [",
+            "    {",
+            "      title: {",
+            "        content: '$2',",
+            "        class: ''",
+            "      },",
+            "      body: {",
+            "        columns: [",
+            "          {",
+            "            col: [",
+            "                $3",
+            "            ],",
+            "          },",
+            "        ]",
+            "      }",
+            "    },",
+            "  ]",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Componente Accordeon recebe uma ou duas colunas internamente, podendo receber varios outros componentes internamente."
+    },
+    "[FLAMBOYANT] Audio": {
+        "prefix": "!fAudio",
+        "body": [
+            "{",
+            "  type: 'audio',",
+            "  resource: {",
+            "    class: '$1', ",
+            "    classContainer: '',",
+            "    src: '$2.mp3', ",
+            "    alt: '$3',",
+            "    attr: {",
+            "        loop: false, ",
+            "        autoplay: false,",
+            "        controls: true,",
+            "    },",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Utilizado para receber arquivos de audio MP3."
+    },
+    "[FLAMBOYANT] Background": {
+        "prefix": "!fBackground",
+        "body": [
+            "{",
+            "  type: 'background',",
+            "  resource: {",
+            "    class: '$1',",
+            "    src: '$2',",
+            "    alt: ''",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Para inserir imagem de fundo."
+    },
+    "[FLAMBOYANT] BackgroundCor": {
+        "prefix": "!fBackgroundCor",
+        "body": [
+            "{",
+            "  type: 'background',",
+            "  resource: {",
+            "    class: '$1',",
+            "    cor: '$2',",
+            "    alt: ''",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Para inserir cor fundo."
+    },
+    "[FLAMBOYANT] BackgroundWidcard": {
+        "prefix": "!fBackgroundWidcard",
+        "body": [
+            "+template-wildcard({",
+            "    class: '$1',",
+            "    bg: '$2',",
+            "    columns: [",
+            "        {",
+            "           col:[",
+            "              $3",
+            "           ]",
+            "        }",
+            "        {",
+            "           col:[",
+            "              $4",
+            "           ]",
+            "        }",
+            "    ]",
+            "}),"
+        ],
+        "description": "[FLAMBOYANT] Para inserir imagem no fundo do Widcard"
+    },
+    "[FLAMBOYANT] BackgroundVideo": {
+        "prefix": "!fBackgroundVideo",
+        "body": [
+            "+template-wildcard({",
+            "    class: '$1',",
+            "    video: '$2',",
+            "    columns: [",
+            "        {",
+            "           col:[",
+            "              $3",
+            "           ]",
+            "        }",
+            "        {",
+            "           col:[",
+            "              $4",
+            "           ]",
+            "        }",
+            "    ]",
+            "}),"
+        ],
+        "description": "[FLAMBOYANT] Para inserir cor vídeo de fundo."
+    },
+    "[FLAMBOYANT] Button": {
+        "prefix": "!fButton",
+        "body": [
+            "{",
+            "  type: 'button',",
+            "  resource: {",
+            "    alt: 'button',",
+            "    class: '$1',",
+            "    attr: {",
+            "       onClick:''",
+            "    }",
+            "    content: [",
+            "      $2",
+            "    ]",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Funcionalidade de clique para usar um evento"
+    },
+    "[FLAMBOYANT] ButtonModal": {
+        "prefix": "!fButtonModal",
+        "body": [
+            "{",
+            "  type: 'button',",
+            "  resource: {",
+            "    alt: 'button',",
+            "    class: '$1',",
+            "    activeModal: '#Modal$2',",
+            "    content: [",
+            "      $3",
+            "    ]",
+            "  }",
+            "},"
+        ],
+        "description": "Funcionalidade de clique e pode abrir Modal(activeModal) E.: #Modal01"
+    },
+    "[FLAMBOYANT] Card": {
+        "prefix": "!fCard",
+        "body": [
+            "{",
+            "  type: 'card',",
+            "  resource: {",
+            "  class: '$1',",
+            "  content: [",
+            "      $2",
+            "    ]",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Composição entre um ou mais componentes no sentido vertical."
+    },
+    "[FLAMBOYANT] ColunaDupla": {
+        "prefix": "!fColunaDupla",
+        "body": [
+            "+template-wildcard({",
+            "  class: '$1',",
+            "  columns: [",
+            "    {",
+            "      type: '01-50',",
+            "      col:[",
+            "        {",
+            "          type: 'class',",
+            "          resource: ''",
+            "        },",
+            "        $2",
+            "      ],",
+            "    },",
+            "    {",
+            "      type: '01-50',",
+            "      col:[",
+            "        {",
+            "          type: 'class',",
+            "          resource: ''",
+            "        },",
+            "        $3",
+            "      ]",
+            "    }",
+            "  ]",
+            "})"
+        ],
+        "description": "[FLAMBOYANT] As Colunas Padrões são as mais usadas durante o desenvolvimento de uma peça. A formação pode ser usado em 1 ou 2 colunas padrões na viewport ou com mais colunas caso existam colunas customizadas. O foco principal é a adição de N componentes dentro de cada coluna."
+    },
+    "[FLAMBOYANT] ColunaSimples": {
+        "prefix": "!fColunaSimples",
+        "body": [
+            "+template-wildcard({",
+            "  class: '',",
+            "  columns: [",
+            "    {",
+            "      col:[",
+            "        {",
+            "          type: 'class',",
+            "          resource: '$1'",
+            "        },",
+            "        $2",
+            "      ],",
+            "    }",
+            "  ]",
+            "})"
+        ],
+        "description": "[FLAMBOYANT] As Colunas Padrões são as mais usadas durante o desenvolvimento de uma peça. A formação pode ser usado em 1 ou 2 colunas padrões na viewport ou com mais colunas caso existam colunas customizadas. O foco principal é a adição de N componentes dentro de cada coluna."
+    },
+    "[FLAMBOYANT] Guide": {
+        "prefix": "!fGuide",
+        "body": [
+            "{",
+            "  type: 'guide',",
+            "  resource: {",
+            "  class: '$1',",
+            "    content: [",
+            "      {",
+            "        type: 'image',",
+            "        resource: {",
+            "          src: '$2',",
+            "          class: '',",
+            "          alt: '',",
+            "        }",
+            "      },",
+            "      {",
+            "        type: 'text',",
+            "        resource: {",
+            "          content: '$3',",
+            "          class: '',",
+            "        }",
+            "      },",
+            "    ]",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Elemento com objetivo de deixar uma informação em destaque para guiar alguma ação."
+    },
+    "[FLAMBOYANT] Holder": {
+        "prefix": "!fHolder",
+        "body": [
+            "{",
+            "  type: 'holder',",
+            "  resource: {",
+            "    class: '$1',",
+            "    content: [",
+            "        $2",
+            "      ]",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Elmento auxiliar que fica interno a outros elementos, como Card e Line."
+    },
+    "[FLAMBOYANT] Image": {
+        "prefix": "!fImage",
+        "body": [
+            "{",
+            "  type: 'image',",
+            "  resource: {",
+            "    classContainer: '',",
+            "    class: '$1',",
+            "    src: '$2',",
+            "    alt: ''",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Imagem que precisa estar dentro das limitações das margens."
+    },
+    "[FLAMBOYANT] ImageComModal": {
+        "prefix": "!fImageComModal",
+        "body": [
+            "{",
+            "  type: 'image',",
+            "  resource: {",
+            "    classContainer: '',",
+            "    class: '$1',",
+            "    src: '$2',",
+            "    attr:{ 'data-modal' : '$3'},",
+            "    alt: ''",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Imagem que precisa estar dentro das limitações das margens, com data-modal."
+    },
+    "[FLAMBOYANT] Iframe": {
+        "prefix": "!fIframe",
+        "body": [
+            "{",
+            "  type: 'iframe',",
+            "  resource: {",
+            "    classContainer: '',",
+            "    class: '$1',",
+            "    src: '$2',",
+            "    attr:{ 'allowfullscreen' : 'allowfullscreen'},",
+            "    alt: ''",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Utilizado para receber link de iframe."
+    },
+    "[FLAMBOYANT] Link": {
+        "prefix": "!fLink",
+        "body": [
+            "{",
+            "  type: 'link',",
+            "  resource: {",
+            "    alt: '',",
+            "    classContainer: '',",
+            "    class: '$1',",
+            "    href: '$2',",
+            "    target: '_blank',",
+            "    download: 'download',",
+            "    content: [",
+            "       $3",
+            "    ]",
+            "    alt: ''",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Tem funcionalidade de clique que por padrão abre um link ou faz o download(pdf, imagem)."
+    },
+    "[FLAMBOYANT] Li": {
+        "prefix": "!fLi",
+        "body": [
+            "      {",
+            "        class: '$1', ",
+            "        li: '$2',",
+            "      },",
+        ],
+        "description": "[FLAMBOYANT] Elemento filho do UL: <ul><li></li></ul>"
+    },
+    "[FLAMBOYANT] Line": {
+        "prefix": "!fLine",
+        "body": [
+            "{",
+            "  type: 'line',",
+            "  class: '$1',",
+            "  dimensions: '$2',",
+            "  resource: [",
+            "    {",
+            "      fraction: 'minor',",
+            "      content: [",
+            "        $3",
+            "        ",
+            "      ]",
+            "    },",
+            "    {",
+            "      fraction: 'major',",
+            "      content:[",
+            "        $4",
+            "        ",
+            "      ]",
+            "    }",
+            "  ]",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Elemento com objetivo de deixa em 2 colunas, uma com fração menor e outra com fração maior."
+    },
+    "[FLAMBOYANT] List": {
+        "prefix": "!fList",
+        "body": [
+            "{",
+            "  type: 'list',",
+            "  class: '$1',",
+            "  resource: [",
+            "   $2",
+            "  ]",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Cria uma lista de elementos em sequência."
+    },
+    "[FLAMBOYANT] Modal/Pop": {
+        "prefix": "!fModal",
+        "body": [
+            "+modal('$1', 'modal $2')",
+            "  +template-wildcard({",
+            "      bg: '',",
+            "      class: '$3',",
+            "      columns:[",
+            "        {",
+            "          col:[",
+            "            {",
+            "              type: 'class',",
+            "              resource: ''",
+            "            },",
+            "             $4",
+            "          ],",
+            "        }",
+            "      ]",
+            "    })"
+        ],
+        "description": "[FLAMBOYANT] Criação do Modal"
+    },
+    "[FLAMBOYANT] Pop/Modal": {
+        "prefix": "!Pop",
+        "body": [
+            "+modal('$1', 'modal $2')",
+            "  +template-wildcard({",
+            "      bg: '',",
+            "      class: '$3',",
+            "      columns:[",
+            "        {",
+            "          col:[",
+            "            {",
+            "              type: 'class',",
+            "              resource: ''",
+            "            },",
+            "             $4",
+            "          ],",
+            "        }",
+            "      ]",
+            "    })"
+        ],
+        "description": "[FLAMBOYANT] Criação do Modal"
+    },
+    "[FLAMBOYANT] Slider": {
+        "prefix": "!fSlider",
+        "body": [
+            "{",
+            "  type: 'slides',",
+            "  resource: {",
+            "    class: '$1',",
+            "    nextLiberate: false,",
+            "    slides: [",
+            "      {",
+            "        columns: [",
+            "          {",
+            "            col: [",
+            "              {",
+            "                type: 'class',",
+            "                resource: ''",
+            "              },",
+            "               $2",
+            "            ]",
+            "          },",
+            "        ]",
+            "      },",
+            "      {",
+            "        columns: [",
+            "          {",
+            "            col: [",
+            "              {",
+            "                type: 'class',",
+            "                resource: ''",
+            "              },",
+            "               $3",
+            "            ]",
+            "          },",
+            "        ]",
+            "      },",
+            "    ]",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Slides: Utilizado com a própria estrutura. Em coluna única ou dupla, pode receber outros componentes internamente."
+    },
+    "[FLAMBOYANT] Carousel": {
+        "prefix": "!fCarousel",
+        "body": [
+            "{",
+            "   type: 'slides',",
+            "   resource: {",
+            "    show: 3,",
+            "    loop: true,",
+            "    class: '$1',",
+            "    nextLiberate: false,",
+            "    slides: [",
+            "      {",
+            "        columns: [",
+            "          {",
+            "            col: [",
+            "              {",
+            "                type: 'class',",
+            "                resource: ''",
+            "              },",
+            "               $2",
+            "            ]",
+            "          },",
+            "        ]",
+            "      },",
+            "      {",
+            "        columns: [",
+            "          {",
+            "            col: [",
+            "              {",
+            "                type: 'class',",
+            "                resource: ''",
+            "              },",
+            "               $3",
+            "            ]",
+            "          },",
+            "        ]",
+            "      },",
+            "    ]",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Carousel: Utilizado em coluna única, pode receber outros componentes internamente. Funciona praticamente da mesma maneira que o Slider, mas se apresenta como um carrossel em loop, sempre destacando o item central. Por isso, para utilizar este componente, precisamos ter, no mínimo, três objetos."
+    },
+    "[FLAMBOYANT] Bigtitle": {
+        "prefix": "!fBigtitle",
+        "body": [
+            "{",
+            "  type: 'bigtitle',",
+            "  resource: {",
+            "    class: '$1',",
+            "    content: '$2',",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Título destaque do projeto.(H1)"
+    },
+    "[FLAMBOYANT] Title": {
+        "prefix": "!fTitle",
+        "body": [
+            "{",
+            "  type: 'Title',",
+            "  resource: {",
+            "    class: '$1',",
+            "    content: '$2',",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Título destaque da seção/tela.(H2)"
+    },
+    "[FLAMBOYANT] Subtitle": {
+        "prefix": "!fSubtitle",
+        "body": [
+            "{",
+            "  type: 'subtitle',",
+            "  resource: {",
+            "    class: '$1',",
+            "    content: '$2',",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Título secundário da seção/tela.(H3)"
+    },
+    "[FLAMBOYANT] Text": {
+        "prefix": "!fText",
+        "body": [
+            "{",
+            "  type: 'text',",
+            "  resource: {",
+            "    class: '$1',",
+            "    content: '$2',",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Paragrafo do seção/tela."
+    },
+    "[FLAMBOYANT] Subtext(small)": {
+        "prefix": "!fSubtext",
+        "body": [
+            "{",
+            "  type: 'subtext',",
+            "  resource: {",
+            "    class: '$1',",
+            "    content: '$2',",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Texto de tamanho menor, normalmente utilizado para legendas de imagens."
+    },
+    "[FLAMBOYANT] UL": {
+        "prefix": "!fUl",
+        "body": [
+            "{",
+            "  type: 'ul',",
+            "  class: '$1', ",
+            "  resource: {",
+            "    content: [",
+            "      {",
+            "        class: '$2',",
+            "        li: '$3',",
+            "      },",
+            "    ]",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Utilizado para criação de listas ul > li."
+    },
+    "[FLAMBOYANT] Video": {
+        "prefix": "!fVideo",
+        "body": [
+            "{",
+            "  type: 'video',",
+            "  resource: {",
+            "    class: '$1',",
+            "    classContainer: '',",
+            "    src: '$2.mp4',",
+            "    alt: '',",
+            "    attr: {",
+            "      loop: false,",
+            "      autoplay: false,",
+            "      controls: true,",
+            "    }",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Utilizado para receber arquivos de vídeo MP4."
+    },
+    "[FLAMBOYANT] Magnet": {
+        "prefix": "!fMagnet",
+        "body": [
+            "{",
+            "  type: 'magnet',",
+            "  resource: {",
+            "    class: '$1',",
+            "    magnetClass: '$2',",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Caso precise criar um elemento customizado, como por exemplo um SVG com controles de programação, é possível criar esse elemento no mixin.custom.pug  com uma classe( identificadora ) e acoplar esse mesmo elemento em qualquer local do wildcard e demais templates."
+    },
+    "[FLAMBOYANT] Flipcard": {
+        "prefix": "!fFlipcard",
+        "body": [
+            "{",
+            "  type: 'flipcard',",
+            "  resource: {",
+            "    class: '$1',",
+            "    model: 'vertical',",
+            "    event: 'click',",
+            "    front:[",
+            "       {",
+            "         type: 'card',",
+            "         resource: {",
+            "            class: '',",
+            "            content: [",
+            "               $2",
+            "            ]",
+            "         }",
+            "       },",
+            "    ]",
+            "    back:[",
+            "       {",
+            "         type: 'card',",
+            "         resource: {",
+            "            class: '',",
+            "            content: [",
+            "               $3",
+            "            ]",
+            "         }",
+            "       },",
+            "    ]",
+            "  }",
+            "},"
+        ],
+        "description": "[FLAMBOYANT] Duplo card, com a lógica de um oculto e que através do evento hover ou clique esse card é apresentado. Internamente, cada um segue a mesma forma de estruturar do card padrão."
+    }
+    
+}
