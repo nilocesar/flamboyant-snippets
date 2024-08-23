@@ -10,7 +10,6 @@
       "name":"Nilo Cesar",
       "mail":"e_maildonilo@yahoo.com.br"
   },
-  "activationEvents": [],
   "engines": {
     "vscode": "^1.92.0"
   },
